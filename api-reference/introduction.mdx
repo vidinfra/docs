@@ -1,33 +1,20 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introduction"
+description: "Learn how to start building with Tenbyte's REST APIs."
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+Tenbyte is a global edge-cloud and security provider with **150\+ Points of Presence on six continents**. Every product is backed by a public, REST-style API so you can automate everything you do in the Customer Portal — or build entirely new experiences of your own.\\
 
-## Welcome
+**Why build on the API?**
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+- **Automate** routine tasks such as CDN cache purges, DNS record updates, or VM provisioning.
+- **Integrate** Tenbyte services into CI/CD pipelines, Terraform workflows, Kubernetes Operators, or custom back-office tools.
+- **Monitor & react** to real-time metrics or events and keep your infrastructure in a desired state.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+Whether you’re shipping a simple web app or operating a multi-region SaaS platform, Tenbyte's APIs give you the same programmatic control used internally by our portal and SDKs.
 
-## Authentication
+## **Authentication**
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+1. Sign in to the **Customer Portal → API Keys**.
+2. Create an API Key  (optionally set an expiry or rotate it later).
+3. Send the token as an _APIKey_ in the `Authorization` header:
