@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "vidinfra",
+    "title": "Tenbyte API",
     "description": "",
     "version": "1.0.0"
   },
@@ -1404,9 +1404,9 @@
     },
     "/distributions/{distributionID}/purges": {
       "post": {
-        "summary": "Create Purge",
+        "summary": "Purge cache",
         "deprecated": false,
-        "description": "",
+        "description": "Delete cache from CDN servers. This is necessary to update CDN content.",
         "tags": [],
         "parameters": [
           {
@@ -1449,14 +1449,14 @@
         },
         "security": [
           {
-            "bearer": []
+            "ApiKeyAuth": []
           }
         ]
       }
     },
     "/distributions/{distributionID}/prefetches": {
       "post": {
-        "summary": "Create Prefetch",
+        "summary": "Prefetch content",
         "deprecated": false,
         "description": "",
         "tags": [],
@@ -2449,11 +2449,11 @@
             }
           },
           {
-            "name": "Authorization",
+            "name": "X-API-Key",
             "in": "header",
             "description": "",
-            "required": false,
-            "example": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25zb2xlLnZpZGluZnJhLmNvbSIsImV4cCI6MTc1NjEzNzQzMywiaWF0IjoxNzU2MDk0MjMzLCJqdGkiOiI3YTc0YzlkMi1mZTllLTQ3NTQtOTVjZi03ZmE3NzA3MjVkMDQiLCJlbWFpbCI6Im9zbWFubWFzdW0uY3NAZ21haWwuY29tIiwidXNlcm5hbWUiOiJNYXN1bSBPc21hbiIsInJvbGUiOiJvd25lciIsInVzZXJfaWQiOiJkYzMwNDVkOS03MGJiLTRkNGYtYTY1MC0yMmMxMzRkYzhmMjEiLCJzZXNzaW9uX2lkIjoiZmU5YzI3NDktZjcyNy00ZDBiLWI4OGMtNDkyNDVkZWIzYjBmIiwib3JnYW5pemF0aW9uX2lkIjoiYzNhNzU5NjAtM2ZiYS00NGUwLTgyZjctZTU0ZWUyZDVhN2Y3In0.VZrOH1JJAqi_Ek9V-1GleZik19d0iwNnD7Pq8U6rGuQYGFQBtA_58Ayc7xM-NSgZ8PfLJHq3sfLeVZifnVyysAMZAwOlwP0iJZpXcArKzRx7LBheNm0FJ6u2OkNbaYSx16aqh8rbTDD-EW-BSTe_2kJqgGHJR4u6ROYHo0o3ZLJCbmlm_OgdZwDDYKXZ2mdzr-3WO7Ap7484Hsu4VbzubWev0DvaDFr0TR8v4DNbGPJL--3eILMOfJ_68JBByBpIQYzL0lsa2lLEVI4CPfbBXCeo8r4MHH_YrisZcIiQGmMucdEtglgJd_FfOaBOkd4vrxKvufci-IZyAeUMF3iDOABMZUqF_BCBa2cLCBaCTCLCPura0b0UHqTJDAlvQqe1bjSbzeOv4Hu90FIZNapo1x0HDpZV0nKdEGvGyC1tnalP5AMGn_Gzgium9cvjGU3719X4dYawckb1XrWVnHlWWPtlEXs8HmQlHrKczJDhrMqorlnvJrTLUgdqFKgVlshuO6jGDT3G-m3eWvX_BQRSbbeCjzYdLkAt4twNvlWTlA38CPYOTNMzrJUWZ1IK86CGWFFWkMcPrOMyeRD3k8TUIbmQcVexC7X4slf8zaSOdgXqYQuDAl_OE11JWhGVHOdvVIOWllIhtLA7aQ6pmkkUJXvnPEiLxJOfean6e1U2uz0",
+            "required": true,
+            "example": "pIeCybHoEyUEEDKYxuC46nMX0cpWaQ9ZoBtET+hhMSzOg92Bff8P4Em7c4uBoKcSh9NGze3hJ0OgGiRiiR4vVtprcWrXs8F+T9edcao7Ps2MrDZVxM3+RxfcoUc=",
             "schema": {
               "type": "string"
             }
