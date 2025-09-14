@@ -1,0 +1,161 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "palm",
+  "name": "My Docs",
+  "colors": {
+    "primary": "#2fc7b9",
+    "light": "#fd5b20",
+    "dark": "#032220"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Content Delivery Network",
+            "pages": [
+              "index",
+              {
+                "group": "Set Up CDN Basic",
+                "pages": [
+                  {
+                    "group": "CDN Resource Basic",
+                    "pages": [
+                      "set-up-cdn-basic/cdn-resource-basic/create-a-CDN-resource",
+                      "set-up-cdn-basic/cdn-resource-basic/acceesing-the-CDN-Dashboard",
+                      "set-up-cdn-basic/cdn-resource-basic/for-Static-Site",
+                      "set-up-cdn-basic/cdn-resource-basic/for-Dynamic-Site",
+                      "set-up-cdn-basic/cdn-resource-basic/for-Video-on-Demand",
+                      "set-up-cdn-basic/cdn-resource-basic/for-Live-Stream"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API reference",
+        "groups": [
+          {
+            "group": "CDN",
+            "pages": [
+              "api-reference/introduction",
+                  {
+                    "group": "Access-Rules",
+                    "pages": [
+                      "api-reference/access-rules/create-new-access",
+                      "api-reference/access-rules/update",
+                      "api-reference/access-rules/access-rules-list",
+                      "api-reference/access-rules/access-rules-details",
+                      "api-reference/access-rules/access-rules-details-copy"
+                    ]
+                  },
+                  {
+                    "group": "Analytics",
+                    "pages": [
+                      "api-reference/analytics/analytics"
+                    ]
+                  },
+                  {
+                    "group": "Cache Rules",
+                    "pages": [
+                      "api-reference/cache-rules/create-cache-rules",
+                      "api-reference/cache-rules/cache-rules-list",
+                      "api-reference/cache-rules/cache-rules-details",
+                      "api-reference/cache-rules/cache-rules-delete", 
+                      "api-reference/cache-rules/cache-rules-update"
+                    ]
+                  },
+                  {
+                    "group": "Distributions",
+                    "pages": [
+                      "api-reference/distributions/patch-distribution",
+                      "api-reference/distributions/cdn-distribution-api-–-create-distribution",
+                      "api-reference/distributions/update-a-distribution",
+                      "api-reference/distributions/get-distribution-count",
+                      "api-reference/distributions/get-distribution-stats"
+                    ]
+                  },
+                  {
+                    "group": "SSL Certificate",
+                    "pages": [
+                      "api-reference/ssl-certificate/get-certificate",
+                      "api-reference/ssl-certificate/get-certificate-stats",
+                      "api-reference/ssl-certificate/request-for-lets-encrypt-ssl",
+                      "api-reference/ssl-certificate/get-list-certificates",
+                      "api-reference/ssl-certificate/create-new-ssl"
+
+                    ]
+                  },
+                  {
+                    "group": "Origin/Upstream Manage",
+                    "pages": [
+                      "api-reference/upstream-manage/create-origins",
+                      "api-reference/upstream-manage/get-origins-list"
+                    ]
+                  },
+                  {
+                    "group": "Purge",
+                    "pages": [
+                      "api-reference/purge/create-purge"
+                    ]
+                  },
+                  {
+                    "group": "Prefetch",
+                    "pages": [
+                      "api-reference/prefetch/create-prefetch"
+                    ]
+                  },
+                  {
+                    "group": "Prefetch",
+                    "pages": [
+                      "api-reference/prefetch/create-prefetch"
+                    ]
+                  },
+                  {
+                    "group": "Analytics",
+                    "pages": [
+                      "api-reference/analytics/analytics"
+                    ]
+                  },
+                  {
+                    "group": "HTTPS Headers",
+                    "pages": [
+                      "api-reference/https-hearders/https-headers",
+                       "api-reference/https-hearders/get-haders"
+                    ]
+                  }
+                
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@tenbyte.io"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://console.tenbyte.io/"
+    }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/tenbyteofficial/posts/?feedView=ally"
+    }
+  }
+}

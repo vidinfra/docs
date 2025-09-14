@@ -1,0 +1,134 @@
+This guide explains how to create and configure a **CDN distribution for static content**, such as images, CSS, JavaScript files & other assets that rarely change.
+
+
+
+### Step 01: New Distribution Setup
+When you first open the **“Create Distribution”** page, all fields will appear empty, ready for you to fill in.
+<img src="/Images-of-Tenbyte/For-Static-Site/001.png" alt="" width="100"/>
+
+The Save button will only appear once all required information has been completed.
+
+### Step 02: Fill in distribution details
+Fill in the distribution details by entering **Distributions Details**, choosing the **Domain Type**, and selecting the **Apropriate Cache Strategy**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Once the details are filled, the Distribution Overview section provides a summary of your configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="/Images-of-Tenbyte/08-Dis-Over-01.png" alt="" width="100"/>
+<img src="/Images-of-Tenbyte/08-Dis-Over-02.png" alt="" width="100"/>
+### Step 4: Manage SSL
+If the user selects Custom SSL Certificate, they can either upload a new certificate or choose from existing certificates already available in their account.
+
+1. **Let’s Encrypt SSL:** Automatically issue a free SSL certificate for your domain.
+<img src="/Images-of-Tenbyte/01-SSL.png" alt="" width="100"/>
+2. **Verify the CNAME**
+<img src="/Images-of-Tenbyte/02-SSL.png" alt="" width="100"/>
+3. **Certificate Issuing:** After completing CNAME verification, the SSL certificate is issued and applied to your distribution. It can takes few minutes.
+<img src="/Images-of-Tenbyte/03-SSL.png" alt="" width="100"/>
+4. **Custom SSL- Choose or Upload:** Upload your own SSL certificate files directly to Tenbyte. Ensure that the certificate and private key are valid and match your domain.
+<img src="/Images-of-Tenbyte/04-SSL.png" alt="" width="100"/>
+<img src="/Images-of-Tenbyte/05-SSL.png" alt="" width="100"/>
+5. **Revoke SSL Certificate:** If you no longer want an SSL certificate applied to your CDN distribution, you can revoke the certificate.
+<img src="/Images-of-Tenbyte/06-SSL.png" alt="" width="100"/>
+6. **Use Tenbyte SSL:** Tenbyte provides a managed SSL option that can be applied directly to your CDN distribution without needing to upload a certificate.
+<img src="/Images-of-Tenbyte/07-SSL.png" alt="" width="100"/>
+### Step 5: Configure the Origin
+Choose the source of your content, either a hostname or an S3 bucket, and provide the required information. Fill in the fields according to the type of resource you are connecting.
+1. **Hostname**
+    - Enter the origin label of your server for easy identification.
+    - Include hostname and ip address where the content is stored.
+    <img src="/Images-of-Tenbyte/05-Hostname-active-and-Closed.png" alt="" width="100"/>
+
+2. **S3-Origin**
+    - **Access Key ID:** Enter your cloud storage access key ID.
+    - **Secret Access Key:** Enter your cloud storage secret access key.
+    - **Bucket Name:** Specify the name of your S3 bucket, e.g., Tenbyte.
+    - **Region:** Enter the S3 bucket region, e.g., us-east-1.
+    <img src="/Images-of-Tenbyte/04-S3-Origin-Selected.png" alt="" width="100"/>
+<Callout type="warning">
+    ⚠️ Warning: Make sure all fields are filled accurately to ensure the CDN can fetch content correctly from your origin.
+</Callout>
+### Step 5 : Ready to Create Distribution
+
+Once all required fields for creating the distribution are completed, a button bar will appear. This bar includes two buttons: **Create Distribution** to finalize the setup, and **Cancel** to discard the changes.
+
+<img src="/Images-of-Tenbyte/04-S3-Origin-Selected.png" alt="" width="100"/>
+
+### Step 6: Distribution Status
+After clicking Create Distribution, the system will process your request. You may encounter one of two outcomes:
+
+1. **Distribution Successful**
+    - A confirmation message will appear indicating that your CDN distribution has been successfully created.
+    <img src="/Images-of-Tenbyte/07-Distribution-Created-Successfully.png" alt="" width="100"/>
+
+    Your distribution will be listed in the CDN dashboard, ready to use.
+
+2. **Distribution Failed**
+    - If there is an issue, an error message will appear with Contact Support and Try again button.
+    - Check the required fields, origin configuration, and SSL settings, then try creating the distribution again.
+    <img src="/Images-of-Tenbyte/07-Distribution-Creation-Failed.png" alt="" width="100"/>
+<Callout type="warning">
+    ⚠️ Tip: Ensure all fields are filled correctly and resources are accessible to avoid distribution failures.
+</Callout>
