@@ -44,6 +44,16 @@
             "group": "CDN",
             "pages": [
               "api-reference/introduction",
+                 {
+                    "group": "Distributions",
+                    "pages": [
+                      "api-reference/distributions/patch-distribution",
+                      "api-reference/distributions/cdn-distribution-api-–-create-distribution",
+                      "api-reference/distributions/update-a-distribution",
+                      "api-reference/distributions/get-distribution-count",
+                      "api-reference/distributions/get-distribution-stats"
+                    ]
+                  },
                   {
                     "group": "Access-Rules",
                     "pages": [
@@ -68,16 +78,6 @@
                       "api-reference/cache-rules/cache-rules-details",
                       "api-reference/cache-rules/cache-rules-delete", 
                       "api-reference/cache-rules/cache-rules-update"
-                    ]
-                  },
-                  {
-                    "group": "Distributions",
-                    "pages": [
-                      "api-reference/distributions/patch-distribution",
-                      "api-reference/distributions/cdn-distribution-api-–-create-distribution",
-                      "api-reference/distributions/update-a-distribution",
-                      "api-reference/distributions/get-distribution-count",
-                      "api-reference/distributions/get-distribution-stats"
                     ]
                   },
                   {
