@@ -2497,7 +2497,7 @@
   },
   "servers": [
     {
-      "url": "https://api.tenbyte.io/v1",
+      "url": "https://api.tenbyte.io/cdn/v1",
       "description": "Tenbyte API"
     }
   ],
