@@ -44,92 +44,71 @@
             "group": "CDN",
             "pages": [
               "api-reference/introduction",
-                 {
-                    "group": "Distributions",
-                    "pages": [
-                      "api-reference/distributions/patch-distribution",
-                      "api-reference/distributions/cdn-distribution-api-–-create-distribution",
-                      "api-reference/distributions/update-a-distribution",
-                      "api-reference/distributions/get-distribution-count",
-                      "api-reference/distributions/get-distribution-stats"
-                    ]
-                  },
-                  {
-                    "group": "Access-Rules",
-                    "pages": [
-                      "api-reference/access-rules/create-new-access",
-                      "api-reference/access-rules/update",
-                      "api-reference/access-rules/access-rules-list",
-                      "api-reference/access-rules/access-rules-details",
-                      "api-reference/access-rules/access-rules-details-copy"
-                    ]
-                  },
-                  {
-                    "group": "Analytics",
-                    "pages": [
-                      "api-reference/analytics/analytics"
-                    ]
-                  },
-                  {
-                    "group": "Cache Rules",
-                    "pages": [
-                      "api-reference/cache-rules/create-cache-rules",
-                      "api-reference/cache-rules/cache-rules-list",
-                      "api-reference/cache-rules/cache-rules-details",
-                      "api-reference/cache-rules/cache-rules-delete", 
-                      "api-reference/cache-rules/cache-rules-update"
-                    ]
-                  },
-                  {
-                    "group": "SSL Certificate",
-                    "pages": [
-                      "api-reference/ssl-certificate/get-certificate",
-                      "api-reference/ssl-certificate/get-certificate-stats",
-                      "api-reference/ssl-certificate/request-for-lets-encrypt-ssl",
-                      "api-reference/ssl-certificate/get-list-certificates",
-                      "api-reference/ssl-certificate/create-new-ssl"
-
-                    ]
-                  },
-                  {
-                    "group": "Origin/Upstream Manage",
-                    "pages": [
-                      "api-reference/upstream-manage/create-origins",
-                      "api-reference/upstream-manage/get-origins-list"
-                    ]
-                  },
-                  {
-                    "group": "Purge",
-                    "pages": [
-                      "api-reference/purge/create-purge"
-                    ]
-                  },
-                  {
-                    "group": "Prefetch",
-                    "pages": [
-                      "api-reference/prefetch/create-prefetch"
-                    ]
-                  },
-                  {
-                    "group": "Prefetch",
-                    "pages": [
-                      "api-reference/prefetch/create-prefetch"
-                    ]
-                  },
-                  {
-                    "group": "Analytics",
-                    "pages": [
-                      "api-reference/analytics/analytics"
-                    ]
-                  },
-                  {
-                    "group": "HTTPS Headers",
-                    "pages": [
-                      "api-reference/https-hearders/https-headers",
-                       "api-reference/https-hearders/get-haders"
-                    ]
-                  }
-                
+              {
+                "group": "Distributions",
+                "pages": [
+                  "api-reference/distributions/patch-distribution",
+                  "api-reference/distributions/cdn-distribution-api-–-create-distribution",
+                  "api-reference/distributions/update-a-distribution",
+                  "api-reference/distributions/get-distribution-count",
+                  "api-reference/distributions/get-distribution-stats"
+                ]
+              },
+              {
+                "group": "Origins",
+                "pages": [
+                  "api-reference/upstream-manage/create-origins",
+                  "api-reference/upstream-manage/get-origins-list"
+                ]
+              },
+              {
+                "group": "Cache Rules",
+                "pages": [
+                  "api-reference/cache-rules/create-cache-rules",
+                  "api-reference/cache-rules/cache-rules-list",
+                  "api-reference/cache-rules/cache-rules-details",
+                  "api-reference/cache-rules/cache-rules-delete",
+                  "api-reference/cache-rules/cache-rules-update"
+                ]
+              },
+              {
+                "group": "Access-Rules",
+                "pages": [
+                  "api-reference/access-rules/create-new-access",
+                  "api-reference/access-rules/update",
+                  "api-reference/access-rules/access-rules-list",
+                  "api-reference/access-rules/access-rules-details",
+                  "api-reference/access-rules/access-rules-details-copy"
+                ]
+              },
+              {
+                "group": "SSL Certificate",
+                "pages": [
+                  "api-reference/ssl-certificate/get-certificate",
+                  "api-reference/ssl-certificate/get-certificate-stats",
+                  "api-reference/ssl-certificate/request-for-lets-encrypt-ssl",
+                  "api-reference/ssl-certificate/get-list-certificates",
+                  "api-reference/ssl-certificate/create-new-ssl"
+                ]
+              },
+              {
+                "group": "Tools",
+                "pages": [
+                  "api-reference/purge/create-purge",
+                  "api-reference/prefetch/create-prefetch"
+                ]
+              },
+              {
+                "group": "HTTP Header",
+                "pages": [
+                  "api-reference/https-hearders/https-headers",
+                  "api-reference/https-hearders/get-haders"
+                ]
+              },
+              {
+                "group": "Analytics",
+                "pages": ["api-reference/analytics/analytics"]
+              }
             ]
           }
         ]

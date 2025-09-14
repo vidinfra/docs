@@ -116,9 +116,7 @@
         "summary": "CDN Distribution API – Create Distribution",
         "deprecated": false,
         "description": "Creates a new CDN distribution for a customer. This API allows configuration of caching behavior, domain mapping, and origin server settings.",
-        "tags": [
-          "cdn"
-        ],
+        "tags": ["cdn"],
         "parameters": [
           {
             "name": "Authorization",
@@ -144,10 +142,7 @@
                   "domain_type": {
                     "type": "string",
                     "description": "The type of domain: custom (user-provided CNAME) or shared.",
-                    "enum": [
-                      "system",
-                      "custom"
-                    ]
+                    "enum": ["system", "custom"]
                   },
                   "cname": {
                     "type": "string",
@@ -177,11 +172,7 @@
                         "description": "url"
                       }
                     },
-                    "required": [
-                      "name",
-                      "type",
-                      "url"
-                    ],
+                    "required": ["name", "type", "url"],
                     "description": "Configuration for the origin server."
                   }
                 },
@@ -222,9 +213,7 @@
         "summary": "Get  Distribution List",
         "deprecated": false,
         "description": "# 📦 Distributions API Documentation\n\n## Endpoint\n\n    GET /v1/distributions\n\n------------------------------------------------------------------------\n\n## Query Parameters\n\n### 📑 Pagination\n\n  ----------------------------------------------------------------------------\n  Parameter   Type     Description\n  ----------- -------- -------------------------------------------------------\n  `page`      number   Page number (default: 1)\n\n  `limit`     number   Number of items per page (default: 15, min: 1, max: 50)\n  ----------------------------------------------------------------------------\n\n------------------------------------------------------------------------\n\n### 🔍 Filtering\n\nYou can filter by the following fields:\n\n-   `id`\n-   `name`\n-   `cname`\n-   `domain`\n-   `status`\n-   `domain_type`\n-   `cache_strategy`\n-   `organization_id`\n-   `certificate_id`\n-   `enable_ssl`\n-   `is_redirect_http_to_https`\n-   `is_http2`\n-   `is_http3`\n-   `is_cname_valid`\n-   `is_acme_challenge_valid`\n-   `le_issue`\n-   `created_at`\n-   `updated_at`\n\n#### Operators\n\n  Operator        Description\n  --------------- ------------------------------------------\n  `eq`            Equals\n  `ne`            Not equals\n  `like`          Contains (case insensitive)\n  `not-like`      Does not contain\n  `starts-with`   Starts with\n  `ends-with`     Ends with\n  `gt`            Greater than\n  `gte`           Greater than or equal\n  `lt`            Less than\n  `lte`           Less than or equal\n  `in`            In list (comma-separated)\n  `not-in`        Not in list\n  `null`          Is null\n  `not-null`      Is not null\n  `between`       Between two values (comma-separated)\n  `not-between`   Not between two values (comma-separated)\n\n#### Example Filters\n\n    filter[name][starts-with]=cdn-\n    filter[status][in]=active,disabled\n    filter[enable_ssl][eq]=true\n    filter[created_at][between]=2025-01-01,2025-08-01\n\n------------------------------------------------------------------------\n\n### ↕ Sorting\n\n  ---------------------------------------------------------------------------\n  Parameter   Description\n  ----------- ---------------------------------------------------------------\n  `sort`      Sort fields. Prefix with `-` for descending. Allowed:\n              `created_at`, `updated_at`, `name`, `status`, `domain_type`,\n              `cache_strategy`, `domain`, `cname`\n\n  ---------------------------------------------------------------------------\n\n#### Example Sorts\n\n    sort=-created_at\n    sort=name\n    sort=-created_at,name\n\n------------------------------------------------------------------------\n\n## 📌 Example Requests\n\n### 1. Prefix search + newest first\n\n    GET /v1/distributions?filter[name][starts-with]=cdn-&sort=-created_at\n\n### 2. Status + type + alphabetical\n\n    GET /v1/distributions?filter[status][in]=active,disabled&filter[domain_type][eq]=system&sort=name\n\n### 3. Created date range\n\n    GET /v1/distributions?filter[created_at][between]=2025-01-01,2025-08-01&sort=-created_at\n\n### 4. SSL-only\n\n    GET /v1/distributions?filter[enable_ssl][eq]=true\n\n------------------------------------------------------------------------\n\n## ✅ Success Response\n\n    Status: 200 OK\n    {\n      \"success\": true,\n      \"count\": 2,\n      \"data\": [\n        {\n          \"id\": \"uuid\",\n          \"name\": \"cdn-example\",\n          \"status\": \"active\",\n          \"domain_type\": \"system\",\n          \"enable_ssl\": true,\n          \"created_at\": \"2025-02-01T12:00:00Z\",\n          \"updated_at\": \"2025-02-10T12:00:00Z\"\n        }\n      ]\n    }\n\n------------------------------------------------------------------------\n\n## ❌ Error Response\n\n    Status: 400 Bad Request\n    {\n      \"success\": false,\n      \"message\": \"Invalid filter query\",\n      \"errors\": {\n        \"filter\": \"Unsupported field or operator\"\n      }\n    }\n",
-        "tags": [
-          "cdn"
-        ],
+        "tags": ["cdn"],
         "parameters": [
           {
             "name": "page",
@@ -376,12 +365,7 @@
                               "type": "string"
                             }
                           },
-                          "required": [
-                            "self",
-                            "first",
-                            "next",
-                            "last"
-                          ]
+                          "required": ["self", "first", "next", "last"]
                         },
                         "pagination": {
                           "type": "object",
@@ -407,10 +391,7 @@
                           ]
                         }
                       },
-                      "required": [
-                        "links",
-                        "pagination"
-                      ]
+                      "required": ["links", "pagination"]
                     },
                     "message": {
                       "type": "string"
@@ -419,12 +400,7 @@
                       "type": "boolean"
                     }
                   },
-                  "required": [
-                    "data",
-                    "meta",
-                    "message",
-                    "success"
-                  ]
+                  "required": ["data", "meta", "message", "success"]
                 },
                 "example": {
                   "data": [
@@ -658,9 +634,7 @@
         "summary": "Get  Distribution Count",
         "deprecated": false,
         "description": "# 📦 Distributions API Documentation\n\n## Endpoint\n\n    GET /v1/distributions\n\n------------------------------------------------------------------------\n\n## Query Parameters\n\n### 📑 Pagination\n\n  ----------------------------------------------------------------------------\n  Parameter   Type     Description\n  ----------- -------- -------------------------------------------------------\n  `page`      number   Page number (default: 1)\n\n  `limit`     number   Number of items per page (default: 15, min: 1, max: 50)\n  ----------------------------------------------------------------------------\n\n------------------------------------------------------------------------\n\n### 🔍 Filtering\n\nYou can filter by the following fields:\n\n-   `id`\n-   `name`\n-   `cname`\n-   `domain`\n-   `status`\n-   `domain_type`\n-   `cache_strategy`\n-   `organization_id`\n-   `certificate_id`\n-   `enable_ssl`\n-   `is_redirect_http_to_https`\n-   `is_http2`\n-   `is_http3`\n-   `is_cname_valid`\n-   `is_acme_challenge_valid`\n-   `le_issue`\n-   `created_at`\n-   `updated_at`\n\n#### Operators\n\n  Operator        Description\n  --------------- ------------------------------------------\n  `eq`            Equals\n  `ne`            Not equals\n  `like`          Contains (case insensitive)\n  `not-like`      Does not contain\n  `starts-with`   Starts with\n  `ends-with`     Ends with\n  `gt`            Greater than\n  `gte`           Greater than or equal\n  `lt`            Less than\n  `lte`           Less than or equal\n  `in`            In list (comma-separated)\n  `not-in`        Not in list\n  `null`          Is null\n  `not-null`      Is not null\n  `between`       Between two values (comma-separated)\n  `not-between`   Not between two values (comma-separated)\n\n#### Example Filters\n\n    filter[name][starts-with]=cdn-\n    filter[status][in]=active,disabled\n    filter[enable_ssl][eq]=true\n    filter[created_at][between]=2025-01-01,2025-08-01\n\n------------------------------------------------------------------------\n\n### ↕ Sorting\n\n  ---------------------------------------------------------------------------\n  Parameter   Description\n  ----------- ---------------------------------------------------------------\n  `sort`      Sort fields. Prefix with `-` for descending. Allowed:\n              `created_at`, `updated_at`, `name`, `status`, `domain_type`,\n              `cache_strategy`, `domain`, `cname`\n\n  ---------------------------------------------------------------------------\n\n#### Example Sorts\n\n    sort=-created_at\n    sort=name\n    sort=-created_at,name\n\n------------------------------------------------------------------------\n\n## 📌 Example Requests\n\n### 1. Prefix search + newest first\n\n    GET /v1/distributions?filter[name][starts-with]=cdn-&sort=-created_at\n\n### 2. Status + type + alphabetical\n\n    GET /v1/distributions?filter[status][in]=active,disabled&filter[domain_type][eq]=system&sort=name\n\n### 3. Created date range\n\n    GET /v1/distributions?filter[created_at][between]=2025-01-01,2025-08-01&sort=-created_at\n\n### 4. SSL-only\n\n    GET /v1/distributions?filter[enable_ssl][eq]=true\n\n------------------------------------------------------------------------\n\n## ✅ Success Response\n\n    Status: 200 OK\n    {\n      \"success\": true,\n      \"count\": 2,\n      \"data\": [\n        {\n          \"id\": \"uuid\",\n          \"name\": \"cdn-example\",\n          \"status\": \"active\",\n          \"domain_type\": \"system\",\n          \"enable_ssl\": true,\n          \"created_at\": \"2025-02-01T12:00:00Z\",\n          \"updated_at\": \"2025-02-10T12:00:00Z\"\n        }\n      ]\n    }\n\n------------------------------------------------------------------------\n\n## ❌ Error Response\n\n    Status: 400 Bad Request\n    {\n      \"success\": false,\n      \"message\": \"Invalid filter query\",\n      \"errors\": {\n        \"filter\": \"Unsupported field or operator\"\n      }\n    }\n",
-        "tags": [
-          "cdn"
-        ],
+        "tags": ["cdn"],
         "parameters": [
           {
             "name": "page",
@@ -812,12 +786,7 @@
                               "type": "string"
                             }
                           },
-                          "required": [
-                            "self",
-                            "first",
-                            "next",
-                            "last"
-                          ]
+                          "required": ["self", "first", "next", "last"]
                         },
                         "pagination": {
                           "type": "object",
@@ -843,10 +812,7 @@
                           ]
                         }
                       },
-                      "required": [
-                        "links",
-                        "pagination"
-                      ]
+                      "required": ["links", "pagination"]
                     },
                     "message": {
                       "type": "string"
@@ -855,12 +821,7 @@
                       "type": "boolean"
                     }
                   },
-                  "required": [
-                    "data",
-                    "meta",
-                    "message",
-                    "success"
-                  ]
+                  "required": ["data", "meta", "message", "success"]
                 },
                 "example": {
                   "data": {
@@ -886,9 +847,7 @@
         "summary": "Get Distribution Stats",
         "deprecated": false,
         "description": "# 📦 Distributions API Documentation\n\n## Endpoint\n\n    GET /v1/distributions\n\n------------------------------------------------------------------------\n\n## Query Parameters\n\n### 📑 Pagination\n\n  ----------------------------------------------------------------------------\n  Parameter   Type     Description\n  ----------- -------- -------------------------------------------------------\n  `page`      number   Page number (default: 1)\n\n  `limit`     number   Number of items per page (default: 15, min: 1, max: 50)\n  ----------------------------------------------------------------------------\n\n------------------------------------------------------------------------\n\n### 🔍 Filtering\n\nYou can filter by the following fields:\n\n-   `id`\n-   `name`\n-   `cname`\n-   `domain`\n-   `status`\n-   `domain_type`\n-   `cache_strategy`\n-   `organization_id`\n-   `certificate_id`\n-   `enable_ssl`\n-   `is_redirect_http_to_https`\n-   `is_http2`\n-   `is_http3`\n-   `is_cname_valid`\n-   `is_acme_challenge_valid`\n-   `le_issue`\n-   `created_at`\n-   `updated_at`\n\n#### Operators\n\n  Operator        Description\n  --------------- ------------------------------------------\n  `eq`            Equals\n  `ne`            Not equals\n  `like`          Contains (case insensitive)\n  `not-like`      Does not contain\n  `starts-with`   Starts with\n  `ends-with`     Ends with\n  `gt`            Greater than\n  `gte`           Greater than or equal\n  `lt`            Less than\n  `lte`           Less than or equal\n  `in`            In list (comma-separated)\n  `not-in`        Not in list\n  `null`          Is null\n  `not-null`      Is not null\n  `between`       Between two values (comma-separated)\n  `not-between`   Not between two values (comma-separated)\n\n#### Example Filters\n\n    filter[name][starts-with]=cdn-\n    filter[status][in]=active,disabled\n    filter[enable_ssl][eq]=true\n    filter[created_at][between]=2025-01-01,2025-08-01\n\n------------------------------------------------------------------------\n\n### ↕ Sorting\n\n  ---------------------------------------------------------------------------\n  Parameter   Description\n  ----------- ---------------------------------------------------------------\n  `sort`      Sort fields. Prefix with `-` for descending. Allowed:\n              `created_at`, `updated_at`, `name`, `status`, `domain_type`,\n              `cache_strategy`, `domain`, `cname`\n\n  ---------------------------------------------------------------------------\n\n#### Example Sorts\n\n    sort=-created_at\n    sort=name\n    sort=-created_at,name\n\n------------------------------------------------------------------------\n\n## 📌 Example Requests\n\n### 1. Prefix search + newest first\n\n    GET /v1/distributions?filter[name][starts-with]=cdn-&sort=-created_at\n\n### 2. Status + type + alphabetical\n\n    GET /v1/distributions?filter[status][in]=active,disabled&filter[domain_type][eq]=system&sort=name\n\n### 3. Created date range\n\n    GET /v1/distributions?filter[created_at][between]=2025-01-01,2025-08-01&sort=-created_at\n\n### 4. SSL-only\n\n    GET /v1/distributions?filter[enable_ssl][eq]=true\n\n------------------------------------------------------------------------\n\n## ✅ Success Response\n\n    Status: 200 OK\n    {\n      \"success\": true,\n      \"count\": 2,\n      \"data\": [\n        {\n          \"id\": \"uuid\",\n          \"name\": \"cdn-example\",\n          \"status\": \"active\",\n          \"domain_type\": \"system\",\n          \"enable_ssl\": true,\n          \"created_at\": \"2025-02-01T12:00:00Z\",\n          \"updated_at\": \"2025-02-10T12:00:00Z\"\n        }\n      ]\n    }\n\n------------------------------------------------------------------------\n\n## ❌ Error Response\n\n    Status: 400 Bad Request\n    {\n      \"success\": false,\n      \"message\": \"Invalid filter query\",\n      \"errors\": {\n        \"filter\": \"Unsupported field or operator\"\n      }\n    }\n",
-        "tags": [
-          "cdn"
-        ],
+        "tags": ["cdn"],
         "parameters": [],
         "responses": {
           "200": {
@@ -911,11 +870,7 @@
                           "type": "integer"
                         }
                       },
-                      "required": [
-                        "active",
-                        "provisioning",
-                        "suspended"
-                      ]
+                      "required": ["active", "provisioning", "suspended"]
                     },
                     "message": {
                       "type": "string"
@@ -924,11 +879,7 @@
                       "type": "boolean"
                     }
                   },
-                  "required": [
-                    "data",
-                    "message",
-                    "success"
-                  ]
+                  "required": ["data", "message", "success"]
                 },
                 "example": {
                   "data": {
@@ -1071,9 +1022,7 @@
         "summary": "Get Certificate Stats",
         "deprecated": false,
         "description": "# 📦 Distributions API Documentation\n\n## Endpoint\n\n    GET /v1/distributions\n\n------------------------------------------------------------------------\n\n## Query Parameters\n\n### 📑 Pagination\n\n  ----------------------------------------------------------------------------\n  Parameter   Type     Description\n  ----------- -------- -------------------------------------------------------\n  `page`      number   Page number (default: 1)\n\n  `limit`     number   Number of items per page (default: 15, min: 1, max: 50)\n  ----------------------------------------------------------------------------\n\n------------------------------------------------------------------------\n\n### 🔍 Filtering\n\nYou can filter by the following fields:\n\n-   `id`\n-   `name`\n-   `cname`\n-   `domain`\n-   `status`\n-   `domain_type`\n-   `cache_strategy`\n-   `organization_id`\n-   `certificate_id`\n-   `enable_ssl`\n-   `is_redirect_http_to_https`\n-   `is_http2`\n-   `is_http3`\n-   `is_cname_valid`\n-   `is_acme_challenge_valid`\n-   `le_issue`\n-   `created_at`\n-   `updated_at`\n\n#### Operators\n\n  Operator        Description\n  --------------- ------------------------------------------\n  `eq`            Equals\n  `ne`            Not equals\n  `like`          Contains (case insensitive)\n  `not-like`      Does not contain\n  `starts-with`   Starts with\n  `ends-with`     Ends with\n  `gt`            Greater than\n  `gte`           Greater than or equal\n  `lt`            Less than\n  `lte`           Less than or equal\n  `in`            In list (comma-separated)\n  `not-in`        Not in list\n  `null`          Is null\n  `not-null`      Is not null\n  `between`       Between two values (comma-separated)\n  `not-between`   Not between two values (comma-separated)\n\n#### Example Filters\n\n    filter[name][starts-with]=cdn-\n    filter[status][in]=active,disabled\n    filter[enable_ssl][eq]=true\n    filter[created_at][between]=2025-01-01,2025-08-01\n\n------------------------------------------------------------------------\n\n### ↕ Sorting\n\n  ---------------------------------------------------------------------------\n  Parameter   Description\n  ----------- ---------------------------------------------------------------\n  `sort`      Sort fields. Prefix with `-` for descending. Allowed:\n              `created_at`, `updated_at`, `name`, `status`, `domain_type`,\n              `cache_strategy`, `domain`, `cname`\n\n  ---------------------------------------------------------------------------\n\n#### Example Sorts\n\n    sort=-created_at\n    sort=name\n    sort=-created_at,name\n\n------------------------------------------------------------------------\n\n## 📌 Example Requests\n\n### 1. Prefix search + newest first\n\n    GET /v1/distributions?filter[name][starts-with]=cdn-&sort=-created_at\n\n### 2. Status + type + alphabetical\n\n    GET /v1/distributions?filter[status][in]=active,disabled&filter[domain_type][eq]=system&sort=name\n\n### 3. Created date range\n\n    GET /v1/distributions?filter[created_at][between]=2025-01-01,2025-08-01&sort=-created_at\n\n### 4. SSL-only\n\n    GET /v1/distributions?filter[enable_ssl][eq]=true\n\n------------------------------------------------------------------------\n\n## ✅ Success Response\n\n    Status: 200 OK\n    {\n      \"success\": true,\n      \"count\": 2,\n      \"data\": [\n        {\n          \"id\": \"uuid\",\n          \"name\": \"cdn-example\",\n          \"status\": \"active\",\n          \"domain_type\": \"system\",\n          \"enable_ssl\": true,\n          \"created_at\": \"2025-02-01T12:00:00Z\",\n          \"updated_at\": \"2025-02-10T12:00:00Z\"\n        }\n      ]\n    }\n\n------------------------------------------------------------------------\n\n## ❌ Error Response\n\n    Status: 400 Bad Request\n    {\n      \"success\": false,\n      \"message\": \"Invalid filter query\",\n      \"errors\": {\n        \"filter\": \"Unsupported field or operator\"\n      }\n    }\n",
-        "tags": [
-          "cdn"
-        ],
+        "tags": ["cdn"],
         "parameters": [],
         "responses": {
           "200": {
@@ -1096,11 +1045,7 @@
                           "type": "integer"
                         }
                       },
-                      "required": [
-                        "active",
-                        "provisioning",
-                        "suspended"
-                      ]
+                      "required": ["active", "provisioning", "suspended"]
                     },
                     "message": {
                       "type": "string"
@@ -1109,11 +1054,7 @@
                       "type": "boolean"
                     }
                   },
-                  "required": [
-                    "data",
-                    "message",
-                    "success"
-                  ]
+                  "required": ["data", "message", "success"]
                 },
                 "example": {
                   "data": {
@@ -1487,12 +1428,7 @@
                 "properties": {}
               },
               "example": {
-                "paths": [
-                  "/img/city.jpg",
-                  "/img/*",
-                  "/path/*",
-                  "/static/*"
-                ]
+                "paths": ["/img/city.jpg", "/img/*", "/path/*", "/static/*"]
               }
             }
           }
@@ -1544,12 +1480,7 @@
                 "properties": {}
               },
               "example": {
-                "paths": [
-                  "/img/city.jpg",
-                  "/img/*",
-                  "/path/*",
-                  "/static/*"
-                ]
+                "paths": ["/img/city.jpg", "/img/*", "/path/*", "/static/*"]
               }
             }
           }
@@ -1575,10 +1506,7 @@
                           "type": "string"
                         }
                       },
-                      "required": [
-                        "paths",
-                        "id"
-                      ]
+                      "required": ["paths", "id"]
                     },
                     "message": {
                       "type": "string"
@@ -1587,11 +1515,7 @@
                       "type": "boolean"
                     }
                   },
-                  "required": [
-                    "data",
-                    "message",
-                    "success"
-                  ]
+                  "required": ["data", "message", "success"]
                 },
                 "example": {
                   "data": {
@@ -1683,13 +1607,7 @@
                     ]
                   }
                 },
-                "required": [
-                  "name",
-                  "pattern",
-                  "ttl_seconds",
-                  "type",
-                  "config"
-                ]
+                "required": ["name", "pattern", "ttl_seconds", "type", "config"]
               },
               "example": "{\n    \"name\": \"Cache, No Cache\",\n    \"pattern\": \"./*\",\n    \"ttl_seconds\": 3600,\n    \"type\": \"regex\", // prefix\n    \"config\": {\n        \"ignore_origin_no_cache\": false,\n        \"ignore_client_no_cache\": true,\n        \"never_cache\": false,\n        \"ignore_query_string_in_cache_key\": true,\n        \"gzip_compression\": true\n    }\n}"
             }
@@ -1990,11 +1908,7 @@
                             "type": "string"
                           }
                         },
-                        "required": [
-                          "enabled",
-                          "values",
-                          "action"
-                        ]
+                        "required": ["enabled", "values", "action"]
                       },
                       "ip_access": {
                         "type": "object",
@@ -2012,11 +1926,7 @@
                             "type": "string"
                           }
                         },
-                        "required": [
-                          "enabled",
-                          "values",
-                          "action"
-                        ]
+                        "required": ["enabled", "values", "action"]
                       },
                       "referrer_access": {
                         "type": "object",
@@ -2034,11 +1944,7 @@
                             "type": "string"
                           }
                         },
-                        "required": [
-                          "enabled",
-                          "values",
-                          "action"
-                        ]
+                        "required": ["enabled", "values", "action"]
                       },
                       "token_access": {
                         "type": "object",
@@ -2053,10 +1959,7 @@
                             }
                           }
                         },
-                        "required": [
-                          "enabled",
-                          "values"
-                        ]
+                        "required": ["enabled", "values"]
                       }
                     },
                     "required": [
@@ -2067,12 +1970,7 @@
                     ]
                   }
                 },
-                "required": [
-                  "name",
-                  "match_type",
-                  "match_pattern",
-                  "config"
-                ]
+                "required": ["name", "match_type", "match_pattern", "config"]
               },
               "example": "{\n    \"name\": \"block country\",\n    \"match_type\": \"regex\",\n    \"match_pattern\": \"^/(login|offer)\",\n    \"config\": {\n        \"ip_access\": {\n            \"enabled\": true,\n            \"values\": [\n                \"113.11.48.0/20\"\n            ],\n            \"action\": \"deny\"\n        },\n    }\n}"
             }
@@ -2189,27 +2087,17 @@
                 "config": {
                   "country_access": {
                     "enabled": true,
-                    "values": [
-                      "AR",
-                      "AF",
-                      "IN"
-                    ],
+                    "values": ["AR", "AF", "IN"],
                     "action": "allow"
                   },
                   "ip_access": {
                     "enabled": true,
-                    "values": [
-                      "203.0.113.0/24",
-                      "198.51.100.0/24"
-                    ],
+                    "values": ["203.0.113.0/24", "198.51.100.0/24"],
                     "action": "deny"
                   },
                   "referrer_access": {
                     "enabled": true,
-                    "values": [
-                      "mark.com",
-                      "example.com"
-                    ],
+                    "values": ["mark.com", "example.com"],
                     "action": "allow"
                   }
                 }
@@ -2596,21 +2484,18 @@
   "components": {
     "schemas": {},
     "securitySchemes": {
-      "bearer": {
-        "type": "http",
-        "scheme": "bearer"
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
       }
     }
   },
   "servers": [
     {
-      "url": "https://api-staging.tenbyte.io/v1",
-      "description": "Vidinfra API"
+      "url": "https://api.tenbyte.io/v1",
+      "description": "Tenbyte API"
     }
   ],
-  "security": [
-    {
-      "bearer": []
-    }
-  ]
+  "security": [{ "ApiKeyAuth": [] }]
 }
