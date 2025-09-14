@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "palm",
-  "name": "My Docs",
+  "name": "Tenbyte Docs",
   "colors": {
     "primary": "#2fc7b9",
     "light": "#fd5b20",
@@ -23,13 +23,9 @@
                   {
                     "group": "CDN Resource Basic",
                     "pages": [
-                      "set-up-cdn-basic/cdn-resource-basic/create-a-CDN-resource",
-                      "set-up-cdn-basic/cdn-resource-basic/acceesing-the-CDN-Dashboard",
-                      "set-up-cdn-basic/cdn-resource-basic/for-Static-Site",
-                      "set-up-cdn-basic/cdn-resource-basic/for-Dynamic-Site",
-                      "set-up-cdn-basic/cdn-resource-basic/for-Video-on-Demand",
-                      "set-up-cdn-basic/cdn-resource-basic/for-Live-Stream"
-                    ]
+  "set-up-cdn-basic/cdn-resource-basic/create-a-CDN-resource",
+  "set-up-cdn-basic/cdn-resource-basic/create-a-CDN-resource"
+]
                   }
                 ]
               }
