@@ -11,24 +11,24 @@
   "navigation": {
     "tabs": [
       {
+        "tab": "Home",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "index"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Content Delivery Network",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              {
-                "group": "Set Up CDN Basic",
-                "pages": [
-                  {
-                    "group": "CDN Resource Basic",
-                    "pages": [
-  "set-up-cdn-basic/cdn-resource-basic/create-a-CDN-resource",
-  "set-up-cdn-basic/cdn-resource-basic/create-a-CDN-resource"
-]
-                  }
-                ]
-              }
+              "Account-Settings",
+              "Create-Your-Tenbyte-Account"
             ]
           }
         ]
@@ -37,7 +37,7 @@
         "tab": "API reference",
         "groups": [
           {
-            "group": "CDN",
+            "group": "API Documentation",
             "pages": [
               "api-reference/introduction",
               {
@@ -103,7 +103,9 @@
               },
               {
                 "group": "Analytics",
-                "pages": ["api-reference/analytics/analytics"]
+                "pages": [
+                  "api-reference/analytics/analytics"
+                ]
               }
             ]
           }
