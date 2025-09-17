@@ -29,16 +29,21 @@
             "pages": [
               "Getting-Started",
               {
+                "group": "Account Settings",
+                "pages": [
+                  "account-settings/Account-Settings",
+                  "account-settings/Create-your-Tenbyte-Account"
+
+                  
+                ]
+              },
+              {
                 "group": "Tenbyte Cloud",
                 "pages": [
                   "tenbyte-cloud/create-your-first-vm"
                   
                 ]
-              },
-              "Account-Settings",
-              "Create-Your-Tenbyte-Account"
-              
-
+              }
             ]
           }
         ]
