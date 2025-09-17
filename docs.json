@@ -31,8 +31,8 @@
               {
                 "group": "Account Settings",
                 "pages": [
-                  "account-settings/Account-Settings",
-                  "account-settings/Create-your-Tenbyte-Account"
+                  "account-settings/account-settings",
+                  "account-settings/create-your-tenbyte-account"
 
                   
                 ]
@@ -40,7 +40,7 @@
               {
                 "group": "Tenbyte Cloud",
                 "pages": [
-                  "tenbyte-cloud/Create-your-first-VM",
+                  "tenbyte-cloud/create-your-first-vm",
                   "tenbyte-cloud/Connecting-to-Your-Tenbyte-VM-via-SSH"
                 ]
               }
