@@ -40,8 +40,8 @@
               {
                 "group": "Tenbyte Cloud",
                 "pages": [
-                  "tenbyte-cloud/create-your-First-VM"
-                  
+                  "tenbyte-cloud/create-your-First-VM",
+                  "tenbyte-cloud/Connecting-to-Your-Tenbyte-VM-via-SSH"
                 ]
               }
             ]
