@@ -3,7 +3,7 @@ This guide explains how to securely access your **Tenbyte Virtual Machine (VM)**
 
 You will learn how to connect to your VM, manage it remotely, and perform initial configuration using the Tenbyte Dashboard and an SSH client.
 
-Steps to Connect via SSH :
+## Steps to Connect via SSH :
 
 1. Open the Tenbyte Dashboard
     - Click on Virtual Machines from the dashboard to view your resources.
@@ -52,3 +52,89 @@ Steps to Connect via SSH :
   alt={true}s
   width="100"
 />
+
+6. Log in to Your VM
+    - Enter the **username** and **password** we set during VM creation.
+    - For this guide, we are using ```root``` as the username and the password created earlier.
+
+<img
+  src="/tenbyte-cloud/SSH-Connection/06.png"
+  alt={true}s
+  width="100"
+/>
+
+    - Press Enter to log in. Once authenticated, you will have administrative access to your newly created VM.
+
+<img
+  src="/tenbyte-cloud/SSH-Connection/07.png"
+  alt={true}s
+  width="100"
+/>
+
+7. Configure Your VM for SSH Access
+    - First, update your packages by running:
+      ```bash
+      sudo apt update
+      ```
+    - Next, open the SSH configuration file:
+      ```bash
+        vim /etc/ssh/sshd_config
+      ```
+    - Press ```I``` to enter insert mode.
+    - Scroll down to the **Authentication section** and locate the line:
+      ```bash
+        #PermitRootLogin prohibit-password
+      ```
+<img
+  src="/tenbyte-cloud/SSH-Connection/08.png"
+  alt={true}
+  width="100"
+/>
+
+    - Remove the ```#``` at the beginning and change the value to ```yes```:
+      ```bash
+        PermitRootLogin yes
+      ```
+<img
+  src="/tenbyte-cloud/SSH-Connection/09.png"
+  alt={true}
+  width="100"
+/>
+
+    - Press **Esc**, type ```:wq```, and press **Enter** to **save** and **exit**.
+
+10. Get Your VM’s Public IP
+    - Go back to the Tenbyte Dashboard and copy the Public IP of your VM.
+
+<img
+  src="/tenbyte-cloud/SSH-Connection/010.png"
+  alt={true}
+  width="100"
+/>
+
+11. Open Command Prompt on Local Device
+    - On your local computer, open Command Prompt or PowerShell.
+12. Connect via SSH
+    - Enter the following command, replacing ```<vm_ip>``` with your copied **VM IP** and ```root``` with your **username**:
+      ```bash
+        ssh root@<vm_ip>
+      ```
+<img
+  src="/tenbyte-cloud/SSH-Connection/10.png"
+  alt={true}
+  width="100"
+/>
+
+13. Authenticate and Access
+    - When prompted, type **yes** to accept the host key.
+    - Enter your **password** when prompted. You will then have full access to your VM.
+
+<img
+  src="/tenbyte-cloud/SSH-Connection/11.png"
+  alt={true}
+  width="100"
+/>
+
+You have successfully connected to your Tenbyte Virtual Machine from your Local Machine using SSH. You now have full administrative access to manage, configure, and operate your VM remotely.
+
+With SSH access set up, your Tenbyte VM is ready for all your development and deployment tasks.
