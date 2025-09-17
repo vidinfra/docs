@@ -1,0 +1,101 @@
+In this guide, we’ll walk through how to create your first **Tenbyte Virtual Machine (VM)**.
+
+Steps to Create a VM :
+1. Navigate to Virtual Machine Creation.
+    - Scroll down to **Start Something New** and click on **Virtual Machine**.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/01.png"
+  alt={true}s
+  width="100"
+/>
+
+    - Alternatively, you can click **Compute** from the left-hand menu and scroll down to **Start Something New**.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/02.png"
+  alt={true}s
+  width="100"
+/>
+
+2. Then the **Create New Resource** page will appear.
+3. Select **VM Type** and **Operating System (OS)**
+    - Choose **Virtual Machine**.
+    - Select your preferred operating system. For this guide, we’ll use **Ubuntu 24.04**.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/03.png"
+  alt={true}s
+  width="100"
+/>
+
+4. Choose **Server Class** and **Size**
+    - Scroll down to the **Server Class** section.
+    - Select your preferred server size.
+    - You may also configure the size manually based on your workload requirements.
+    - For this guide, we’ll manually configure the size.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/04.png"
+  alt={true}s
+  width="100"
+/>
+
+5.	Configure Network Settings
+    - Keep the **Public IP** and **VPC Network** settings as default.
+    - Alternatively, you can create a new VPC network by selecting it from the dropdown menu in the VPC Network section.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/004.png"
+  alt={true}s
+  width="100"
+/>
+
+6.	Set Username
+    - Enter ***root*** as the username.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/05.png"
+  alt={true}s
+  width="100"
+/>
+
+<Note>You may see a message: “SSH might not be available for root user due to operating system initial setup. Please use the virtual console to access the system and configure the SSH server according to your needs.” This message will not affect your VM creation process. You can safely proceed.</Note>     
+7.	Set Password
+    - Enter a secure password. Password requirements:
+        + At least one lowercase and one uppercase ASCII letter (a-z, A-Z)
+        + At least one digit (0-9)
+        + Minimum length: 8 characters
+    - Re-enter the password in the Confirm Password field.
+8.	Name Your VM
+    - Assign a resource name for your VM.
+    - For documentation purposes, we will use **Tenbyte-VM**, but you can choose any name following your naming convention.
+9. After completing all the settings, click **Create** to launch your VM. 
+
+<img
+  src="/Tenbyte-Images/VM-Creation/06.png"
+  alt={true}s
+  width="100"
+/>
+
+The system will begin provisioning your virtual machine. This may take a few moments.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/07.png"
+  alt={true}s
+  width="100"
+/>
+
+10. VM Provisioning Complete
+    - After a few moments, your VM will be successfully created.
+    - You can now view your VM in the Dashboard and check details such as Public IP, Private IP,Processor, Memory Boot Disk Size etc.
+
+<img
+  src="/Tenbyte-Images/VM-Creation/08.png"
+  alt={true}s
+  width="100"
+/>
+
+You have successfully created your first Tenbyte Virtual Machine. Your VM is now live and ready to use. 
+
+With this guide, you now have the foundation to create and manage additional virtual machines in Tenbyte’s Cloud Portal efficiently.

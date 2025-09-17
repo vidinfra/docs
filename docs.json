@@ -16,7 +16,7 @@
           {
             "group": "Overview",
             "pages": [
-              "index"
+              "home"
             ]
           }
         ]
@@ -27,14 +27,24 @@
           {
             "group": "Getting Started",
             "pages": [
+              "Getting-Started",
+              {
+                "group": "Tenbyte Cloud",
+                "pages": [
+                  "tenbyte-cloud/create-your-first-vm"
+                  
+                ]
+              },
               "Account-Settings",
               "Create-Your-Tenbyte-Account"
+              
+
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
             "group": "API Documentation",
@@ -95,10 +105,10 @@
                 ]
               },
               {
-                "group": "HTTP Header",
+                "group": "HTTPs Headers",
                 "pages": [
-                  "api-reference/https-hearders/https-headers",
-                  "api-reference/https-hearders/get-haders"
+                  "api-reference/https-headers/https-headers",
+                  "api-reference/https-headers/get-headers"
                 ]
               },
               {
