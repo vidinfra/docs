@@ -27,7 +27,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "Getting-Started",
+              "getting-started",
               {
                 "group": "Account Settings",
                 "pages": [
@@ -40,7 +40,7 @@
               {
                 "group": "Tenbyte Cloud",
                 "pages": [
-                  "tenbyte-cloud/create-your-First-VM",
+                  "tenbyte-cloud/Create-your-first-VM",
                   "tenbyte-cloud/Connecting-to-Your-Tenbyte-VM-via-SSH"
                 ]
               }
