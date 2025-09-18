@@ -1,0 +1,35 @@
+---
+title: " Next.js"
+---
+Here are the steps to integrate our Service with Next.js
+
+## Step 1 : Use the following component as your image component instead of default next/image
+```js
+'use client';
+
+import { default as NextImage } from 'next/image';
+
+const imageLoader = ({ src, width = 10, quality = 75 }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
+};
+
+export default function Image(props) {
+    return (
+        <NextImage
+            loader={imageLoader}
+            {...props}
+        />
+    )
+}
+```
+## Step 2 : And add the following entry in your next config file (next.config.js)
+```js
+module.exports = {
+    // ... other config ...
+    images: {
+        loader: 'custom',
+        deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920],
+        imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 560, 1400, 1600, 1800],
+    },
+}
+```

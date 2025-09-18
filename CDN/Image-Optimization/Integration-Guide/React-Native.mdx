@@ -1,0 +1,102 @@
+---
+title: "React Native"
+---
+Here are the steps to integrate uur service with React Native
+
+---
+## **Step 01: Set Your Allowed Image Widths**
+
+Just like `Next.js`, combine all predictable sizes for your app—both **“device sizes”** (screen widths) and **“image sizes”** (avatars, icons).
+
+**Add this config file:**
+
+```js
+// tenbyteConfig.js
+export const ALLOWED_WIDTHS = [
+  16, 32, 48, 64, 96, 128, 256, 384, 560, 1400, 1600, 1800, // Custom UI/thumbnail sizes
+  320, 480, 640, 750, 828, 1080, 1200, 1920                  // Main device widths
+];
+export const DEFAULT_QUALITY = 75;
+
+export const DOMAIN_MAP = [
+  {
+    original: "your-image-origin.com",           // Your original image host/domain
+    cdn: "your-tenbyte-cdn.tenbytecdn.com"       // Your Tenbyte CDN subdomain
+  }
+];
+```
+## **Step 02: Drop-In TenbyteImage Component**
+
+Here’s a cache-efficient image component for React Native.
+
+Place it in **`./components/TenbyteImage.js`** 
+```js
+import React, { useMemo } from "react";
+import { Image, StyleSheet, PixelRatio } from "react-native";
+import PropTypes from "prop-types";
+import { ALLOWED_WIDTHS, DEFAULT_QUALITY, DOMAIN_MAP } from "../tenbyteConfig";
+
+const getTargetWidth = (requestedWidth) =>
+  ALLOWED_WIDTHS.reduce((prev, curr) =>
+    Math.abs(curr - requestedWidth) < Math.abs(prev - requestedWidth) ? curr : prev
+  );
+
+const extractHostname = (url) => {
+  let hostname = url.indexOf("//") > -1 ? url.split('/')[2] : url.split('/')[0];
+  hostname = hostname.split(':')[0].split('?')[0];
+  return hostname;
+};
+
+//Your can rename "TenbyteImage "with your existing image component name
+
+export default function TenbyteImage({ style, source, quality, ...restProps }) {
+  const flattened = useMemo(() => StyleSheet.flatten(style) || {}, [style]);
+  const width = flattened.width;
+  if (!width) throw new Error("You MUST specify a width in the style prop");
+
+  const srcHost = extractHostname(source.uri);
+  const domainMap = DOMAIN_MAP.find(d => d.original === srcHost);
+  if (!domainMap) throw new Error(`No Tenbyte CDN mapping for ${srcHost}`);
+
+  const devicePixelWidth = width * PixelRatio.get();
+  const bestWidth = getTargetWidth(devicePixelWidth);
+  const optimizedUrl =
+    source.uri.replace(domainMap.original, domainMap.cdn) +
+    `?w=${bestWidth}&q=${quality || DEFAULT_QUALITY}`;
+
+  return (
+    <Image
+      source={{ uri: optimizedUrl }}
+      style={[style, { width }]}
+      {...restProps}
+      resizeMode={restProps.resizeMode || 'cover'}
+    />
+  );
+}
+
+TenbyteImage.propTypes = {
+  source: PropTypes.object.isRequired,
+  style: PropTypes.object.isRequired,
+  quality: PropTypes.number
+};
+```
+
+## **Step 3: Using TenbyteImage**
+
+Wherever you’d use a **`<Image />`** in React Native, just use your new component and point it to any of your origin image URLs:
+```js
+import TenbyteImage from "./components/TenbyteImage";
+
+<TenbyteImage
+  style={{ width: 96, height: 96, borderRadius: 48 }}
+  source={{ uri: "https://your-image-origin.com/avatar/jane.jpg" }}
+/>
+
+<TenbyteImage
+  style={{ width: 1920, height: 1080 }}
+  source={{ uri: "https://your-image-origin.com/banners/hero.jpg" }}
+/>
+```
+For supporting webp into React native app you can check follwing method:
+
+1. [react-native-webp-format](https://www.npmjs.com/package/react-native-webp-format)
