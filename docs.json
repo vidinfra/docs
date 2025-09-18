@@ -39,17 +39,17 @@
                 ]
               },
               {
-                "group": "Tenbyte Cloud",
+                "group": "Cloud",
                 "pages": [
-                  "tenbyte-cloud/getting-started-with-tenbyte-cloud",
-                  "tenbyte-cloud/create-your-first-vm",
-                  "tenbyte-cloud/Connecting-to-Your-Tenbyte-VM-via-SSH"
+                  "Cloud/Getting-Started-with-Tenbyte-Cloud",
+                  "Cloud/Create-your-First-VM",
+                  "Cloud/Connecting-to-Your-Tenbyte-VM-via-SSH"
                 ]
               },
               {
-                "group": "Tenbyte Cdn",
+                "group": "CDN",
                 "pages": [
-                  "tenbyte-cdn/getting-started-with-tenbyte-cdn"
+                  "CDN/Getting-started-with-Tenbyte-CDN"
                 ]
               }
             ]

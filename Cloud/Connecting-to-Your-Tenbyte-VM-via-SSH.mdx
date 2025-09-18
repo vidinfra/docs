@@ -1,3 +1,7 @@
+---
+title: "Connecting to your VM via SSH"
+---
+
 
 This guide explains how to securely access your **Tenbyte Virtual Machine (VM)** from a Windows system using SSH. 
 
@@ -9,7 +13,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - Click on Virtual Machines from the dashboard to view your resources.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/01.png"
+  src="/Cloud/SSH-Connection/01.png"
   alt={true}s
   width="100"
 />
@@ -20,7 +24,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - For this guide, we’ll use the VM named **Tenbyte-VM**. Click on it to open its details.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/02.png"
+  src="/Cloud/SSH-Connection/02.png"
   alt={true}s
   width="100"
 />
@@ -29,7 +33,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - You will see a full overview of your VM’s configuration, including CPU, memory, storage, and network settings.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/03.png"
+  src="/Cloud/SSH-Connection/03.png"
   alt={true}s
   width="100"
 />
@@ -38,7 +42,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - On the top bar, you can perform various actions: **Start, Stop, Force Stop, Reboot, Clone, Terminal, SSH Link, Resize, Change Password**.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/04.png"
+  src="/Cloud/SSH-Connection/04.png"
   alt={true}s
   width="100"
 />
@@ -48,7 +52,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - Here you can make necessary configuration changes to ensure SSH is enabled and ready for remote connections.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/05.png"
+  src="/Cloud/SSH-Connection/05.png"
   alt={true}s
   width="100"
 />
@@ -58,7 +62,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - For this guide, we are using ```root``` as the username and the password created earlier.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/06.png"
+  src="/Cloud/SSH-Connection/06.png"
   alt={true}s
   width="100"
 />
@@ -66,7 +70,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - Press Enter to log in. Once authenticated, you will have administrative access to your newly created VM.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/07.png"
+  src="/Cloud/SSH-Connection/07.png"
   alt={true}s
   width="100"
 />
@@ -86,7 +90,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
         #PermitRootLogin prohibit-password
       ```
 <img
-  src="/tenbyte-cloud/SSH-Connection/08.png"
+  src="/Cloud/SSH-Connection/08.png"
   alt={true}
   width="100"
 />
@@ -96,7 +100,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
         PermitRootLogin yes
       ```
 <img
-  src="/tenbyte-cloud/SSH-Connection/09.png"
+  src="/Cloud/SSH-Connection/09.png"
   alt={true}
   width="100"
 />
@@ -107,7 +111,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - Go back to the Tenbyte Dashboard and copy the Public IP of your VM.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/010.png"
+  src="/Cloud/SSH-Connection/010.png"
   alt={true}
   width="100"
 />
@@ -120,7 +124,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
         ssh root@<vm_ip>
       ```
 <img
-  src="/tenbyte-cloud/SSH-Connection/10.png"
+  src="/Cloud/SSH-Connection/10.png"
   alt={true}
   width="100"
 />
@@ -130,7 +134,7 @@ You will learn how to connect to your VM, manage it remotely, and perform initia
     - Enter your **password** when prompted. You will then have full access to your VM.
 
 <img
-  src="/tenbyte-cloud/SSH-Connection/11.png"
+  src="/Cloud/SSH-Connection/11.png"
   alt={true}
   width="100"
 />
