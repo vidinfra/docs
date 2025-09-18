@@ -50,8 +50,17 @@
                 "group": "CDN",
                 "pages": [
                   "CDN/Getting-started-with-Tenbyte-CDN",
-                  "CDN/Acceesing-the-CDN-Dashboard"
-                ]
+                  "CDN/Acceesing-the-CDN-Dashboard",
+                  {
+                    "group": "Image Optimization",
+                    "pages": [
+                      "/CDN/Image-Optimization/Integration-Guide/Integration-Guide",
+                      "/CDN/Image-Optimization/Integration-Guide/Next.js",
+                      "/CDN/Image-Optimization/Integration-Guide/React-Native"
+                      
+                    ]
+                  }
+                ] 
               }
             ]
           }
