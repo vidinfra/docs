@@ -45,12 +45,6 @@
                   "tenbyte-cloud/create-your-first-vm",
                   "tenbyte-cloud/Connecting-to-Your-Tenbyte-VM-via-SSH"
                 ]
-              },
-              {
-                "group": "Tenbyte cdn",
-                "pages": [
-                  "tenbyte-cdn/getting-started-with-tenbyte-cdn"
-                ]
               }
             ]
           }
