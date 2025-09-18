@@ -7,7 +7,7 @@
     "light": "#fd5b20",
     "dark": "#032220"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/Tenbyte-favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -56,7 +56,9 @@
                     "pages": [
                       "/CDN/Image-Optimization/Integration-Guide/Integration-Guide",
                       "/CDN/Image-Optimization/Integration-Guide/Next-JS",
-                      "/CDN/Image-Optimization/Integration-Guide/React-Native"
+                      "/CDN/Image-Optimization/Integration-Guide/React-Native",
+                      "/CDN/Image-Optimization/Integration-Guide/Wordpress"
+
                       
                     ]
                   }
