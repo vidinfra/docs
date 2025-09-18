@@ -49,8 +49,7 @@
               {
                 "group": "Tenbyte cdn",
                 "pages": [
-                  "tenbyte-cdn/getting-started-with-tenbyte-cdn",
-                  "tenbyte-cdn/create-a-cdn-resource"
+                  "tenbyte-cdn/getting-started-with-tenbyte-cdn"
                 ]
               }
             ]
