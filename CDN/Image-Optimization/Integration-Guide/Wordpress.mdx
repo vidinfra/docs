@@ -27,11 +27,11 @@ We need to know where to fetch the original images for optimization.
 You can configure your origin in two ways:
 1. **Manual Origin** – Add your origin by filling in the Origin Label and Hostname fields.
 
-<img src="02.png" alt="" width="100"/>
+<img src="Wordpress/02.png" alt="" width="100"/>
 
 2. **S3 Bucket Origin** – Connect your S3 bucket by providing the S3 Origin Label, Hostname, Access Key, Bucket Name, and the Region where your bucket is stored.
 
-<img src="03.png" alt="" width="100"/>
+<img src="Wordpress/03.png" alt="" width="100"/>
 
 ### 3. Install and Configure Plugin
 For Tenbyte CDN to work properly, it’s important to disable any other plugins or settings that handle lazy loading, image optimization, or image caching. Since Tenbyte CDN already manages these features, keeping other tools active may cause conflicts and prevent the service from working as intended.
@@ -44,7 +44,7 @@ Once other lazy load and image optimization options are disabled, you can procee
 
 Go to **Plugins > Tenbte Plugin > Settings** on your WordPress dashboard, where you will see the below plugin settings screen.
 
-<img src="04.png" alt="" width="100"/>
+<img src="Wordpress/04.png" alt="" width="100"/>
 
 Enter the subdomain created in Step 2 in the Tenbyte Origin field. Please make sure it is entered in **_https://wordpress-test.gumlet.ioformat_**. 
 
@@ -71,7 +71,7 @@ If you’re using a caching plugin like WP Rocket, setup is very simple:
 6. Save the changes.
 7. Clear your cache to apply the new settings.
 
-<img src="05.png" alt="" width="100"/>
+<img src="Wordpress/05.png" alt="" width="100"/>
 
 **What if I don’t use WP Rocket?**
 
@@ -96,12 +96,12 @@ How do I check if Tenbyte optimizes my images?
 - If the image address starts from **`<yoursubdomain>.tenbyte.io`** then your images are being optimized by Tenbyte.
 - Kindly note that our analytics panel updates every 45 minutes. Checking Analytics right after installing the plugin is not the right way to check if the plugin works.
 
-<img src="06.jpeg" alt="" width="100"/>
+<img src="Wordpress/06.jpeg" alt="" width="100"/>
 
 ### Does serving images from a Tenbyte subdomain affect my SEO?
 No. Tenbyte CDN ensures that your image SEO remains intact by automatically sending a canonical link header to search engines. This is applied for all users without any additional configuration. You can verify this instantly in your browser’s Network tab.
 
-<img src="07.png" alt="" width="100"/>
+<img src="Wordpress/07.png" alt="" width="100"/>
 
 It is also supported by lots of other WP plugins like ShortPixel and other CDN plugins.
 
@@ -109,7 +109,7 @@ It is also supported by lots of other WP plugins like ShortPixel and other CDN p
 
 Tenbyte CDN automatically serves images in WebP format whenever the visitor’s browser supports it. The original image URLs do not change; the format conversion is communicated to the browser via the HTTP response header (MIME type). You can easily verify this using the Network tab in your browser’s developer tools.
 
-<img src="08.png" alt="" width="100"/>
+<img src="Wordpress/08.png" alt="" width="100"/>
 
 If the Google Chrome browser does not show file type as WebP for your website, there is definitely a problem. Reach out to us on support channels, and we will fix it.
 
@@ -123,7 +123,7 @@ If there are certain images you don’t want optimized, you can easily exclude t
 
 This allows you to selectively control which images are optimized while Tenbyte CDN continues to optimize the rest automatically.
 
-<img src="09.png" alt="" width="100"/>
+<img src="Wordpress/09.png" alt="" width="100"/>
 
 ### Why Are My Images Not Resized?
 
@@ -135,7 +135,7 @@ By default, Tenbyte CDN’s responsive image resizing uses the `<img>` tag’s w
 
 This ensures Tenbyte CDN correctly resizes images based on their display size, improving load times and performance scores.
 
-<img src="10.png" alt="" width="100"/>
+<img src="Wordpress/10.png" alt="" width="100"/>
 
 ### The Tenbyte CDN Plugin Affects My Image Grid Layout – How to Fix It
 
