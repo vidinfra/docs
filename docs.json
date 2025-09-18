@@ -49,7 +49,8 @@
               {
                 "group": "CDN",
                 "pages": [
-                  "CDN/Getting-started-with-Tenbyte-CDN"
+                  "CDN/Getting-started-with-Tenbyte-CDN",
+                  "CDN/Acceesing-the-CDN-Dashboard"
                 ]
               }
             ]
